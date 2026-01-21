@@ -1,0 +1,113 @@
+{
+    "NAV": {
+        "DASHBOARD": "لوحة التحكم",
+        "CUSTOMERS": "العملاء",
+        "VEHICLES": "المركبات",
+        "WORK_ORDERS": "أوامر العمل",
+        "INVOICES": "الفواتير",
+        "LOGOUT": "تسجيل الخروج"
+    },
+    "APP": {
+        "TITLE": "الورشة",
+        "WELCOME": "مرحباً"
+    },
+    "AUTH": {
+        "LOGIN": "تسجيل الدخول",
+        "LOGOUT": "تسجيل الخروج",
+        "USERNAME": "اسم المستخدم",
+        "PASSWORD": "كلمة المرور",
+        "SIGN_IN": "تسجيل الدخول",
+        "WELCOME_BACK": "مرحباً بعودتك",
+        "PLEASE_SIGN_IN": "الرجاء تسجيل الدخول للمتابعة"
+    },
+    "DASHBOARD": {
+        "TITLE": "لوحة التحكم",
+        "OVERVIEW": "نظرة عامة",
+        "STATISTICS": "الإحصائيات",
+        "RECENT_ACTIVITY": "النشاط الأخير"
+    },
+    "CUSTOMERS": {
+        "TITLE": "العملاء",
+        "ADD_CUSTOMER": "إضافة عميل",
+        "EDIT_CUSTOMER": "تعديل العميل",
+        "DELETE_CUSTOMER": "حذف العميل",
+        "CUSTOMER_NAME": "اسم العميل",
+        "EMAIL": "البريد الإلكتروني",
+        "PHONE": "الهاتف",
+        "ADDRESS": "العنوان",
+        "SEARCH": "البحث عن العملاء...",
+        "NO_CUSTOMERS": "لا يوجد عملاء"
+    },
+    "VEHICLES": {
+        "TITLE": "المركبات",
+        "ADD_VEHICLE": "إضافة مركبة",
+        "EDIT_VEHICLE": "تعديل المركبة",
+        "DELETE_VEHICLE": "حذف المركبة",
+        "MAKE": "الصانع",
+        "MODEL": "الطراز",
+        "YEAR": "السنة",
+        "LICENSE_PLATE": "لوحة الترخيص",
+        "VIN": "رقم الهيكل",
+        "OWNER": "المالك",
+        "SEARCH": "البحث عن المركبات...",
+        "NO_VEHICLES": "لا توجد مركبات"
+    },
+    "WORK_ORDERS": {
+        "TITLE": "أوامر العمل",
+        "ADD_WORK_ORDER": "إضافة أمر عمل",
+        "EDIT_WORK_ORDER": "تعديل أمر العمل",
+        "DELETE_WORK_ORDER": "حذف أمر العمل",
+        "ORDER_NUMBER": "رقم الأمر",
+        "CUSTOMER": "العميل",
+        "VEHICLE": "المركبة",
+        "STATUS": "الحالة",
+        "DATE": "التاريخ",
+        "DESCRIPTION": "الوصف",
+        "SEARCH": "البحث عن أوامر العمل...",
+        "NO_WORK_ORDERS": "لا توجد أوامر عمل",
+        "PENDING": "قيد الانتظار",
+        "IN_PROGRESS": "قيد التنفيذ",
+        "COMPLETED": "مكتمل",
+        "CANCELLED": "ملغى"
+    },
+    "INVOICES": {
+        "TITLE": "الفواتير",
+        "ADD_INVOICE": "إضافة فاتورة",
+        "EDIT_INVOICE": "تعديل الفاتورة",
+        "DELETE_INVOICE": "حذف الفاتورة",
+        "INVOICE_NUMBER": "رقم الفاتورة",
+        "CUSTOMER": "العميل",
+        "AMOUNT": "المبلغ",
+        "DATE": "التاريخ",
+        "STATUS": "الحالة",
+        "SEARCH": "البحث عن الفواتير...",
+        "NO_INVOICES": "لا توجد فواتير",
+        "PAID": "مدفوع",
+        "UNPAID": "غير مدفوع",
+        "OVERDUE": "متأخر"
+    },
+    "COMMON": {
+        "SAVE": "حفظ",
+        "CANCEL": "إلغاء",
+        "DELETE": "حذف",
+        "EDIT": "تعديل",
+        "ADD": "إضافة",
+        "SEARCH": "بحث",
+        "ACTIONS": "الإجراءات",
+        "CONFIRM": "تأكيد",
+        "YES": "نعم",
+        "NO": "لا",
+        "LOADING": "جاري التحميل...",
+        "ERROR": "خطأ",
+        "SUCCESS": "نجح",
+        "CLOSE": "إغلاق",
+        "BACK": "رجوع",
+        "NEXT": "التالي",
+        "SUBMIT": "إرسال"
+    },
+    "LANGUAGE": {
+        "SELECT": "اختر اللغة",
+        "ENGLISH": "الإنجليزية",
+        "ARABIC": "العربية"
+    }
+}

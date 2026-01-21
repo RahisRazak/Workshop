@@ -628,3 +628,83 @@ body {
     min-height: 44px;
   }
 }
+
+// ============================================
+// RTL SUPPORT
+// ============================================
+
+// RTL text alignment
+[dir="rtl"] {
+  .text-right {
+    text-align: left;
+  }
+
+  .text-left {
+    text-align: right;
+  }
+
+  // Sidebar positioning
+  .sidebar {
+    left: auto;
+    right: 0;
+  }
+
+  .with-sidebar .main-content {
+    margin-left: 0;
+    margin-right: var(--sidebar-width);
+  }
+
+  // Table alignment
+  .data-table {
+
+    th,
+    td {
+      text-align: right;
+    }
+  }
+
+  // Material icons flip
+  .material-icons {
+    transform: scaleX(-1);
+
+    &.no-flip {
+      transform: none;
+    }
+  }
+
+  // Form elements
+  input,
+  select,
+  textarea {
+    text-align: right;
+  }
+
+  // Responsive RTL
+  @media (max-width: $breakpoint-md) {
+    .sidebar {
+      transform: translateX(100%);
+      left: auto;
+      right: 0;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    .with-sidebar .main-content {
+      margin-right: 0;
+    }
+  }
+}
+
+// Material UI RTL adjustments
+[dir="rtl"] {
+  .mat-mdc-dialog-actions {
+    flex-direction: row-reverse;
+  }
+
+  .mat-mdc-snack-bar-container {
+    left: auto;
+    right: 8px;
+  }
+}

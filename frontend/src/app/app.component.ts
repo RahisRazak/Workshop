@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { AuthService } from '@core/services/auth.service';
+import { LanguageService } from '@core/services/language.service';
+import { LanguageSwitcherComponent } from '@shared/components/language-switcher.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, TranslateModule, LanguageSwitcherComponent],
   template: `
     <div class="app-container" [class.with-sidebar]="authService.isLoggedIn()">
       <!-- Mobile Header -->
@@ -16,7 +19,7 @@ import { AuthService } from '@core/services/auth.service';
         </button>
         <div class="mobile-logo">
           <span class="material-icons">build</span>
-          <span>Workshop</span>
+          <span>{{ 'APP.TITLE' | translate }}</span>
         </div>
         <div class="spacer"></div>
       </header>
@@ -33,33 +36,36 @@ import { AuthService } from '@core/services/auth.service';
         <div class="sidebar-header">
           <div class="logo">
             <span class="material-icons">build</span>
-            <span class="logo-text">Workshop</span>
+            <span class="logo-text">{{ 'APP.TITLE' | translate }}</span>
           </div>
-          <button class="close-sidebar" (click)="closeSidebar()">
-            <span class="material-icons">close</span>
-          </button>
+          <div class="header-actions">
+            <app-language-switcher></app-language-switcher>
+            <button class="close-sidebar" (click)="closeSidebar()">
+              <span class="material-icons">close</span>
+            </button>
+          </div>
         </div>
         
         <nav class="sidebar-nav">
           <a routerLink="/dashboard" routerLinkActive="active" class="nav-item" (click)="closeSidebar()">
             <span class="material-icons">dashboard</span>
-            <span>Dashboard</span>
+            <span>{{ 'NAV.DASHBOARD' | translate }}</span>
           </a>
           <a routerLink="/customers" routerLinkActive="active" class="nav-item" (click)="closeSidebar()">
             <span class="material-icons">people</span>
-            <span>Customers</span>
+            <span>{{ 'NAV.CUSTOMERS' | translate }}</span>
           </a>
           <a routerLink="/vehicles" routerLinkActive="active" class="nav-item" (click)="closeSidebar()">
             <span class="material-icons">directions_car</span>
-            <span>Vehicles</span>
+            <span>{{ 'NAV.VEHICLES' | translate }}</span>
           </a>
           <a routerLink="/work-orders" routerLinkActive="active" class="nav-item" (click)="closeSidebar()">
             <span class="material-icons">assignment</span>
-            <span>Work Orders</span>
+            <span>{{ 'NAV.WORK_ORDERS' | translate }}</span>
           </a>
           <a routerLink="/invoices" routerLinkActive="active" class="nav-item" (click)="closeSidebar()">
             <span class="material-icons">receipt_long</span>
-            <span>Invoices</span>
+            <span>{{ 'NAV.INVOICES' | translate }}</span>
           </a>
         </nav>
 
@@ -179,6 +185,13 @@ import { AuthService } from '@core/services/auth.service';
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .logo {
@@ -361,8 +374,11 @@ export class AppComponent {
 
   constructor(
     public authService: AuthService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private languageService: LanguageService
+  ) {
+    // Initialize language service
+  }
 
   toggleSidebar(): void {
     this.sidebarOpen = !this.sidebarOpen;
